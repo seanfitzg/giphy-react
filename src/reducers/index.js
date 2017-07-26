@@ -20,8 +20,6 @@ const searchResults = (state = defaultState, action) => {
                 ],
                 searchTerm: action.text
             };
-        case 'CLEAR':
-            return defaultState;
         default:
             return defaultState;
     }
