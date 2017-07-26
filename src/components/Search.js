@@ -6,11 +6,12 @@ const Search = ({ searchFor, clear }) => {
     let submitForm = e => {
         e.preventDefault();
         if (!input.value.trim()) {
+            clear();
             return;
         }
         searchFor(input.value);
     };
-    
+
     let clearTextbox = e => {
         clear();
         input.value = '';
