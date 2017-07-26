@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { searchFor, clear } from '../actions';
-import Search from '../components/Search'
+import Search from '../components/Search';
 
 const mapStateToProps = state => ({
     searchResults: state.searchResults
