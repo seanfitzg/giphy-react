@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { searchFor, clear } from '../actions';
+import { getImages, clear } from '../actions';
 import Search from '../components/Search';
 
 const mapStateToProps = state => ({
@@ -8,7 +8,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-    searchFor,
+    getImages,
     clear
 };
 

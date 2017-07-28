@@ -8,18 +8,16 @@ const searchResults = (state = defaultState, action) => {
     switch (action.type) {
         case 'SEARCH_FOR':
             return {
-                images: [
-                    {
-                        id: 1,
-                        name: 'image1'
-                    },
-                    {
-                        id: 2,
-                        name: 'image2'
-                    }
-                ],
+                isSearching: true,
                 searchTerm: action.text
             };
+        case 'RECEIVE_IMAGES':
+            return {
+                isSearching: false,
+                searchTerm: action.searchTerm,
+                images: action.images,
+                searchComplete: true
+            }
         default:
             return defaultState;
     }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Search = ({ searchFor, clear }) => {
+const Search = ({ getImages, clear }) => {
     let input;
 
     let submitForm = e => {
@@ -9,7 +9,7 @@ const Search = ({ searchFor, clear }) => {
             clear();
             return;
         }
-        searchFor(input.value);
+        getImages(input.value);
     };
 
     let clearTextbox = e => {
