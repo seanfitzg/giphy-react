@@ -1,6 +1,10 @@
 import React from 'react';
 
 const ResultsList = props => {
+    if (props.searchResults.isSearching) {
+        return <div>I'm searching</div>;
+    }
+
     return (
         <div>
             {props.searchResults.searchComplete
